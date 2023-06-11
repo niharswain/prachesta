@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+	<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+    <script src="{% static 'plugins/slider/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="http://localhost:8000/" />
+    <title>Prachesta Foundation</title>
+	
+
+</head>
+<style>
+    .cat {
+        height: 50px;
+        width: 50px;
+    }
+</style>
+<body>
+
+	<div class="main-container">
+
+		<div class="container">
+		<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="blockContainer">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="margin-top: 10px;">
+		Hello How are you
+		
+		</div>
+		<div id="donateformmiddaymeal" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 details-txt fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="margin-top:25px;visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+		<div class="loader" id="step2" style="display: none; background: url(images/loading_page.gif) 50% 50% no-repeat rgba(249, 249, 249, 0.43); background-color: rgba(0, 0, 0, 0.28);"></div>
+		<form class="form-horizontal donation-border" method="post" action="donation-confirmation" name="form_donation" id="form_donation" style="border-radius:10px;background:#dcf3f2;box-shadow: 0 4px 12px 0 #696868;padding: 0px 10px; margin: auto; display: inline-block; width: 100%;">
+		<div class="form-group" style="margin-left: 0px;">
+		<div id="myContribution">
+		<div class="row" style="margin-right: -7px;">
+		<h5 class="fs-title col-lg-12" style="margin-top:20px;margin-left: -5px;text-align: center;"><strong style="font-weight:bold;line-height: 28px;">Transform the lives of children. Help them come #BackToSchool <br><span style="font-size:14px;"></span> </strong></h5>
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="middaymealsoptions">
+		<div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:20px;">
+		<div class="col-lg-6 col-xs-6">
+		<div class="campoptncss selamount" id="donationsamount_6000" onclick="givecampgnamtClick(6000)"><input style="display:none" type="radio" name="donation_amount" id="donatnamt_6000" value="6000" onclick="givecampgnamtClick(6000)" checked="checked">6000</div>
+		</div>
+		<div class="col-lg-6 col-xs-6">
+		<div class="campoptncss" id="donationsamount_4500" onclick="givecampgnamtClick(4500)"><input style="display:none" type="radio" name="donation_amount" id="donatnamt_4500" value="4500" onclick="givecampgnamtClick(4500)">4500</div>
+		</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12" style="margin: 5px 0px 12px 0px !important;display: inline-block;">
+		
+		<div class="col-lg-12 col-xs-12 helpmsg" id="helpmsg_shaktikit" style="font:600 16px/30px 'myFirstFont' !important;display:none;margin-left:2%;">
+		<div class="col-lg-1 col-xs-4"><i style="color: #fac400;font-size: large;" class="fa fa-heart" aria-hidden="true"></i></div>
+		<div class="col-lg-10 col-xs-8"><p style="font: 500 16px/25px myFirstFont !important;text-align: left;">₹1500 feeds 1 child/year</p></div>
+		</div>
+		<div class="col-lg-12 col-xs-12 helpmsg" id="helpmsg_cookedmeals" style="font:600 16px/30px 'myFirstFont' !important;display:none;margin-left:2%;">
+		<div class="col-lg-1 col-xs-4"><i style="color: #fac400;font-size: large;" class="fa fa-heart" aria-hidden="true"></i></div>
+		<div class="col-lg-10 col-xs-8"><p style="font: 500 16px/25px myFirstFont !important;text-align: left;">₹3000 feeds 2 children/year</p></div>
+		</div>
+		<div class="col-lg-12 col-xs-12 helpmsg" id="helpmsg_happinesskit" style="font:600 16px/30px 'myFirstFont' !important;display:none;margin-left:2%;">
+		<div class="col-lg-1 col-xs-4"><i style="color: #fac400;font-size: large;" class="fa fa-heart" aria-hidden="true"></i></div>
+		<div class="col-lg-10 col-xs-8"><p style="font: 500 16px/25px myFirstFont !important;text-align: left;">₹4500 feeds 3 children/year</p></div>
+		</div>
+		<div class="col-lg-12 col-xs-12 helpmsg" id="helpmsg_homelessmom" style="font:600 16px/30px 'myFirstFont' !important;margin-left:2%;">
+		<div class="col-lg-1 col-xs-4"><i style="color: #fac400;font-size: large;" class="fa fa-heart" aria-hidden="true"></i></div>
+		<div class="col-lg-10 col-xs-8"><p style="font: 500 16px/25px myFirstFont !important;text-align: left;">₹6000 feeds 4 children/year</p></div>
+		</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="col-lg-6 col-xs-6">
+		<div class="campoptncss" id="donationsamount_3000" onclick="givecampgnamtClick(3000)"><input style="display:none" type="radio" name="donation_amount" id="donatnamt_3000" value="3000" onclick="givecampgnamtClick(3000)">3000</div>
+		</div>
+		<div class="col-lg-6 col-xs-6">
+		<div class="campoptncss" id="donationsamount_1500" onclick="givecampgnamtClick(1500)">
+		<input style="display:none" type="radio" name="donation_amount" id="donatnamt_1500" value="1500" onclick="givecampgnamtClick(1500)">1500
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		&nbsp;<label id="otheramtlbl">Rs. </label>
+		
+		&nbsp;<input type="text" name="other_meals_amount" id="other_meals_amount" class="getmidmealotheramt otheramt otherinputs limit_other_meals_amount" placeholder="Other amount" onkeyup="onenterothermealamt(this.value);" onkeypress="return isNumberKey(event)" size="8" style='color:#000 !important;float:revert;width: 50%;font-size: 13px;' maxlength="10">
+		<input id="donation_amount" name="donation_amount" type="hidden" placeholder="amount" class="form-control input-md" readonly="" value="" title="Thank you for your consideration. Request you to sponsor for a minimum of INR 500, as any contribution lower than that is unviable due to processing costs. Appreciate your benevolence." readonly style="background: #eee;">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="col-lg-12 col-xs-12" id="helpmsg_otheramt" style="font:600 16px/30px 'myFirstFont' !important;display:none">
+		<div class="col-lg-12 col-xs-12 helpmsg"><p style="font: 500 15px/30px myFirstFont !important;text-align: center;">The more you can do, the more it can help citizen of our country!</p></div>
+		</div>
+		</div>
+		<label id="donation_amt_errorc" class="callout bottom">
+		Thank you for your consideration. Request you to sponsor for a minimum of INR 100, as any contribution lower than that is unviable due to processing costs. Appreciate your benevolence.
+		</label>
+		</div>
+		
+		</div>
+		<div class="form-group">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+		<h2 class="fs-title" style="font: 900 16px/20px 'Open Sans', sans-serif;text-align: center;margin-top: 15px;">AND ALSO</h2>
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-lg-12 col-md-12 col-sm-12" id="senitisation_kit" style="padding-left: 2px;">
+		<label class="col-lg-9 col-xs-12 col-md-9" for="checkboxes-2" style="margin-top: 6px;">
+		<input style=" height: 14px !important; width: 25px;" type="checkbox" name="senitisation_kit_chk" id="senitisation_kit_chk" value="1" checked><span style='font-weight:bold;font-size:15px;'>I would also like to sponsor a steel meal plate worth ₹100.</span> </label>
+		<div id="noofplatemiddaymeal" style="text-align: left;">
+		<input type="hidden" name="senitisation_kits" id="senitisation_kits" class="form-textboxsmall no-of-plates lions-clubs valid" onkeyup="onchangenoofsanitisationkit(this.value);" onkeypress="return isNumberKey(event)" value="" aria-invalid="false">
+		</div>
+		<div class="col-lg-2 senitisation_kit_amt">
+		<input id="senitisation_kit_amt" name="senitisation_kit_amt" type="text" placeholder="100" class="form-control input-md" value="" readonly>
+		</div>
+		</div>
+		</div>
+		</div>
+		<input type="hidden" name="type_id" value="1">
+		<div style="display:none;">
+		<input type="radio" id="receipt_through_online_or_offline_id" name="receipt_through_online_or_offline" value="1" checked>
+		</div>
+		<div class="row taxmsg" style="margin-top:20px;">
+		<div class="col-lg-12 col-md-12 col-xs-12">
+		<p style="font:500 13px/30px 'myFirstFont' !important;">*You will get your tax exemption certificate within 5-7 working days of making a donation.</p>
+		<p style="font:500 13px/30px 'myFirstFont' !important;">*As per the Indian IT Departments rules, in case you wish to receive the 80G tax-exemption certificate, kindly add your PAN number.</p>
+		</div>
+		</div>
+		<div class="row taxmsg" style="margin: 25px 0px 25px 0px;display: inline-block;color: #000 !important;border-radius: 10px;background-color: #fac400  !important;padding: 5px 20px !important;font: 600 20px/30px 'myFirstFont' !important;">
+		<input type="hidden" name="type_id" value="1">
+		<i style="color: #000;font-size: 15px !important;" class="fa fa-heart" aria-hidden="true"></i><input name="singlebutton" id="nextBtn" type="button" class="btn btn-primary nxtbtn" value="Contribute" onclick="showDonorFlds();" style="color:#000 !important;background-color: #fac400  !important;padding: 5px 20px !important;font: 600 20px/30px 'myFirstFont' !important;border:1px solid #fac400 ;">
+		</div>
+		<div class="form-group" id="second-form-msg" style="display: inline-block;margin-left: 0px;background: #fac400;border-radius: 10px;border: 5px double #000;">
+		<div class="col-lg-12 col-md-12 col-xs-12">
+		<div class="col-lg-8 col-md-8 col-xs-12" style="padding: 0px;">
+		<p style="color:#000 !important;text-align: left;font: 500 16px/30px 'myFirstFont' !important;padding-top: 3px;"><strong>You can make a big difference to their lives : Rs. <span id="hidamount" class="hidamount"></span><br><span style="font-size:14px;"></span> </strong></p>
+		</div>
+		<div class="col-lg-4 col-md-4 col-xs-12" style="padding: 0px;">
+		<i class="fa fa-caret-left" style="margin: 10px 0px 0px 10px;color: #000;float:right;"></i><input name="singlebutton" type="button" id="backBtn" class="btn btn-primary donatebtn" value="Go Back" onclick="showAmountoptn();" style="border: none;background-color: #fac400 ;display: inline-block;font: 500 16px/30px 'myFirstFont' !important;color: #000;float: right;">
+		</div>
+		</div>
+		</div>
+		<div id="donorDetails" style="display:none;">
+		<div class="col-lg-12 col-md-12 col-sm-12" style="display: inline-block;">
+		<h5 class="fs-title col-lg-12" style="margin-left: -18px;text-align: left;">Select your <span>citizenship</span></h5>
+		<label id="mode_id_error_while_filling" class="error" for="mode_id">Please select citizenship</label>
+		<div class="form-group" style="text-align:left;margin-left: -26px;">
+		<div class="col-md-6 col-sm-12 col-xs-12">
+		<input style="width: 15px;" type="radio" name="mode_id" onclick="enabel_mode_id(this.id);" value="6" id="6" onfocus="chk_donationamt();" checked>
+		<label style="padding-left: 4px;" for="6">Indian Citizen</label>
+		<i class="fa fa-info-circle infomode" data-toggle="tooltip" title="For Indian passport holder, Indian bank account holder, or transacting with cards issued by Indian bank."></i>
+		</div>
+		<div class="col-md-6 col-sm-12 col-xs-12">
+		<input style="width: 15px;" type="radio" name="mode_id" onclick="enabel_mode_id(this.id);" value="4" id="4" onfocus="chk_donationamt();">
+		<label style="padding-left: 4px;" for="4">Foreign Citizen</label>
+		<i class="fa fa-info-circle infomode" data-toggle="tooltip" title="For citizens having passport of any other country other than India, non-Indian bank account holder, or transacting with cards issued by non-Indian bank."></i>
+		</div>
+		</div>
+		<div class="form-group" style="text-align:left;">
+		<div class="form-group" style="text-align:left;display:none;" id="forgnhlpmodenote"><p style="padding: 5px 40px;font: 300 13px/22px 'myFirstFont' !important;color:#000 !important;">Note *: If you are a foreign national, only credit card payment will be accepted.</p></div>
+		</div>
+		</div>
+		
+		<div class='row' style="margin-right: -7px; text-align: left;font-weight:bold;">
+		<div class="col-lg-12 col-md-12 col-sm-12" style="display: inline-block;">
+		<h5 class="fs-title col-lg-12" style="font-weight:bold;color:#000;border-bottom:none;">Donor Details</h5>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<div class="col-md-3 margins">
+		<select id="selectbasic" name="salutation" class="form-control">
+		<option value="Mr">Mr</option>
+		<option value="Mrs">Mrs</option>
+		<option value="Ms">Ms</option>
+		<option value="M/S">M/S</option>
+		</select>
+		</div>
+		<div class="col-md-6 margins">
+		<input name="first_name" id="first_name" type="text" placeholder="Full Name *" class="form-control input-mds" value="">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-lg-2 col-md-2 col-xs-12" style="padding-right: 10px;">
+		<h5 style="text-align: left;margin-left: 10px;">DOB</h5>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12" style="margin-left: 0px;">
+		<select class="form-control" id="day" name="dateofbirth"></select>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12" style="margin-left: 0px;">
+		<select class="form-control" id="month" name="monthofbirth" onchange="change_month(this)"></select>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-12" style="margin-left: 0px;">
+		<select class="form-control" id="year" name="yearofbirth" onchange="change_year(this)"></select>
+		</div>
+		</div>
+		<div class="form-group" id="emailid_fld">
+		<div class="col-lg-9 col-md-12 col-sm-12 pan_id" id="pan_id">
+		<input id="pan" name="pan" maxlength="10" type="text" placeholder="PAN No. *" class="pan-card-num form-control input-md" value="" style="text-transform: uppercase;" onkeyup="chkcitizenshipsel()" onfocus="chk_citizenshipsel();">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-lg-9 col-md-12 col-sm-12" id="email_id">
+		<input id="email" name="email" type="text" placeholder="Email ID *" class="email-id form-control input-md" value="">
+		</div>
+		</div>
+		<div class="form-group" id="emailid_fld">
+		<div class="col-lg-9 col-md-12 col-sm-12" id="mobile_id">
+		<input id="mobile" name="mobile" maxlength="10" type="text" placeholder="Mobile *" class="mobile-num form-control input-md" value="">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-lg-9 col-md-12 col-sm-12" id="phone_id" style="display: none;">
+		<input id="phone" name="phone" type="text" placeholder="Phone No *" class="phone-num form-control input-md" value="">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-md-9 margins" id="cityid">
+		<input id="city" name="city" type="text" placeholder="City *" class="form-control input-md cityborder" value="">
+		</div>
+		</div>
+		
+		<div class="form-group" id="donation_amount_id">
+		<input type="hidden" name="campaign_id" value="">
+		</div>
+		
+		<div id="address_dtls_flds">
+		<div class="form-group">
+		
+		<div class="col-md-6 margins" id="addressdiv">
+		<textarea style="color: #000 !important;height:50px !important;" id="address" class="form-control cityborder" name="address" placeholder="Address *"></textarea>
+		</div>
+		<div class="col-md-6 margins" style=" min-height: 38px;">
+		<select name="country_id" id="country_id" class="form-control valid cityborder" onchange="return pinzipplaceholder();">
+		<option value="">Country *</option>
+		<option value="19">Afghanistan</option>
+		<option value="20">Albania</option>
+		<option value="22">Algeria</option>
+		<option value="23">American Samoa</option>
+		<option value="4">Andorra</option>
+		<option value="24">Angola</option>
+		<option value="195">Anguilla</option>
+		<option value="21">Antarctica</option>
+		<option value="25">Antigua and Barbuda</option>
+		<option value="5">Argentina</option>
+		<option value="30">Armenia</option>
+		<option value="158">Aruba</option>
+		<option value="6">Australia</option>
+		<option value="27">Austria</option>
+		<option value="26">Azerbaijan</option>
+		<option value="28">Bahamas</option>
+		<option value="29">Bahrain</option>
+		<option value="7">Bangladesh</option>
+		<option value="31">Barbados</option>
+		<option value="48">Belarus</option>
+		<option value="32">Belgium</option>
+		<option value="40">Belize</option>
+		<option value="68">Benin</option>
+		<option value="33">Bermuda</option>
+		<option value="34">Bhutan</option>
+		<option value="248">Bolivarian Republic of Venezuela</option>
+		<option value="35">Bolivia, Plurinational State Of</option>
+		<option value="160">Bonaire, Sint Eustatius and Saba</option>
+		<option value="36">Bosnia and Herzegovina</option>
+		<option value="37">Botswana</option>
+		<option value="38">Bouvet Island</option>
+		<option value="39">Brazil</option>
+		<option value="41">British Indian Ocean Territory</option>
+		<option value="44">Brunei Darussalam</option>
+		<option value="45">Bulgaria</option>
+		<option value="245">Burkina Faso</option>
+		<option value="47">Burundi</option>
+		<option value="8">Cambodia</option>
+		<option value="49">Cameroon</option>
+		<option value="9">Canada</option>
+		<option value="50">Cape Verde</option>
+		<option value="51">Cayman Islands</option>
+		<option value="52">Central African Republic</option>
+		<option value="54">Chad</option>
+		<option value="55">Chile</option>
+		<option value="10">China</option>
+		<option value="57">Christmas Island</option>
+		<option value="58">Cocos (Keeling) Islands</option>
+		<option value="11">Colombia</option>
+		<option value="59">Comoros</option>
+		<option value="61">Congo</option>
+		<option value="63">Cook Islands</option>
+		<option value="64">Costa Rica</option>
+		<option value="117">Côte D'Ivoire</option>
+		<option value="65">Croatia</option>
+		<option value="12">Cuba</option>
+		<option value="157">Curaçao</option>
+		<option value="66">Cyprus</option>
+		<option value="67">Czech Republic</option>
+		<option value="69">Denmark</option>
+		<option value="87">Djibouti</option>
+		<option value="70">Dominica</option>
+		<option value="71">Dominican Republic</option>
+		<option value="72">Ecuador</option>
+		<option value="239">Egypt</option>
+		<option value="73">El Salvador</option>
+		<option value="74">Equatorial Guinea</option>
+		<option value="76">Eritrea</option>
+		<option value="77">Estonia</option>
+		<option value="75">Ethiopia</option>
+		<option value="79">Falkland Islands (Malvinas)</option>
+		<option value="78">Faroe Islands</option>
+		<option value="81">Fiji</option>
+		<option value="82">Finland</option>
+		<option value="13">France</option>
+		<option value="84">French Guiana</option>
+		<option value="85">French Polynesia</option>
+		<option value="86">French Southern Territories</option>
+		<option value="88">Gabon</option>
+		<option value="90">Gambia</option>
+		<option value="89">Georgia</option>
+		<option value="92">Germany</option>
+		<option value="93">Ghana</option>
+		<option value="94">Gibraltar</option>
+		<option value="96">Greece</option>
+		<option value="97">Greenland</option>
+		<option value="98">Grenada</option>
+		<option value="99">Guadeloupe</option>
+		<option value="100">Guam</option>
+		<option value="101">Guatemala</option>
+		<option value="240">Guernsey</option>
+		<option value="102">Guinea</option>
+		<option value="184">Guinea-Bissau</option>
+		<option value="103">Guyana</option>
+		<option value="104">Haiti</option>
+		<option value="105">Heard Island and McDonald Islands</option>
+		<option value="106">Holy See (Vatican City State)</option>
+		<option value="107">Honduras</option>
+		<option value="108">Hong Kong</option>
+		<option value="109">Hungary</option>
+		<option value="110">Iceland</option>
+		<option value="1">India</option>
+		<option value="111">Indonesia</option>
+		<option value="112">Iran</option>
+		<option value="113">Iraq</option>
+		<option value="114">Ireland</option>
+		<option value="242">Isle of Man</option>
+		<option value="115">Israel</option>
+		<option value="116">Italy</option>
+		<option value="118">Jamaica</option>
+		<option value="15">Japan</option>
+		<option value="241">Jersey</option>
+		<option value="120">Jordan</option>
+		<option value="119">Kazakhstan</option>
+		<option value="121">Kenya</option>
+		 <option value="95">Kiribati</option>
+		<option value="122">Korea</option>
+		<option value="123">Korea, Republic of</option>
+		<option value="124">Kuwait</option>
+		<option value="125">Kyrgyzstan</option>
+		<option value="126">Lao People's Democratic Republic</option>
+		<option value="129">Latvia</option>
+		<option value="127">Lebanon</option>
+		<option value="128">Lesotho</option>
+		<option value="130">Liberia</option>
+		<option value="131">Libya</option>
+		<option value="132">Liechtenstein</option>
+		<option value="133">Lithuania</option>
+		<option value="134">Luxembourg</option>
+		<option value="135">Macao</option>
+		<option value="136">Madagascar</option>
+		<option value="137">Malawi</option>
+		<option value="138">Malaysia</option>
+		<option value="139">Maldives</option>
+		<option value="140">Mali</option>
+		<option value="141">Malta</option>
+		<option value="173">Marshall Islands</option>
+		<option value="142">Martinique</option>
+		<option value="143">Mauritania</option>
+		<option value="144">Mauritius</option>
+		<option value="60">Mayotte</option>
+		<option value="16">Mexico</option>
+		<option value="172">Micronesia, Federated States Of</option>
+		<option value="145">Monaco</option>
+		<option value="146">Mongolia</option>
+		<option value="148">Montenegro</option>
+		<option value="149">Montserrat</option>
+		<option value="150">Morocco</option>
+		<option value="151">Mozambique</option>
+		<option value="46">Myanmar</option>
+		<option value="153">Namibia</option>
+		<option value="154">Nauru</option>
+		<option value="155">Nepal</option>
+		<option value="156">Netherlands</option>
+		<option value="161">New Caledonia</option>
+		<option value="163">New Zealand</option>
+		<option value="164">Nicaragua</option>
+		<option value="165">Niger</option>
+		<option value="166">Nigeria</option>
+		<option value="167">Niue</option>
+		<option value="168">Norfolk Island</option>
+		<option value="170">Northern Mariana Islands</option>
+		<option value="169">Norway</option>
+		<option value="152">Oman</option>
+		<option value="175">Pakistan</option>
+		<option value="174">Palau</option>
+		<option value="91">Palestinian Territory, Occupied</option>
+		<option value="176">Panama</option>
+		<option value="177">Papua New Guinea</option>
+		<option value="178">Paraguay</option>
+		<option value="179">Peru</option>
+		<option value="180">Philippines</option>
+		<option value="181">Pitcairn</option>
+		<option value="182">Poland</option>
+		<option value="183">Portugal</option>
+		<option value="186">Puerto Rico</option>
+		<option value="187">Qatar</option>
+		<option value="238">Republic of Macedonia</option>
+		<option value="147">Republic of Moldova</option>
+		<option value="62">Republic of the Congo</option>
+		<option value="188">Réunion</option>
+		<option value="189">Romania</option>
+		<option value="190">Russian Federation</option>
+		<option value="191">Rwanda</option>
+		<option value="192">Saint Barthélemy</option>
+		<option value="193">Saint Helena, Ascension and Tristan Da Cunha</option>
+		<option value="194">Saint Kitts And Nevis</option>
+		<option value="196">Saint Lucia</option>
+		<option value="197">Saint Martin (French Part)</option>
+		<option value="198">Saint Pierre And Miquelon</option>
+		<option value="199">Saint Vincent And The Grenadines</option>
+		<option value="250">Samoa</option>
+		<option value="200">San Marino</option>
+		<option value="201">Sao Tome and Principe</option>
+		<option value="202">Saudi Arabia</option>
+		<option value="203">Senegal</option>
+		<option value="204">Serbia</option>
+		<option value="205">Seychelles</option>
+		<option value="206">Sierra Leone</option>
+		<option value="207">Singapore</option>
+		<option value="159">Sint Maarten (Dutch part)</option>
+		<option value="208">Slovakia</option>
+		<option value="210">Slovenia</option>
+		<option value="42">Solomon Islands</option>
+		<option value="211">Somalia</option>
+		<option value="212">South Africa</option>
+		<option value="80">South Georgia and the South Sandwich Islands</option>
+		<option value="215">South Sudan</option>
+		<option value="214">Spain</option>
+		<option value="53">Sri Lanka</option>
+		<option value="216">Sudan</option>
+		<option value="218">Suriname</option>
+		<option value="219">Svalbard And Jan Mayen</option>
+		<option value="220">Swaziland</option>
+		<option value="221">Sweden</option>
+		<option value="222">Switzerland</option>
+		<option value="223">Syrian Arab Republic</option>
+		<option value="56">Taiwan, Province Of China</option>
+		<option value="224">Tajikistan</option>
+		<option value="225">Thailand</option>
+		<option value="185">Timor-Leste</option>
+		<option value="226">Togo</option>
+		<option value="227">Tokelau</option>
+		<option value="228">Tonga</option>
+		<option value="229">Trinidad and Tobago</option>
+		<option value="231">Tunisia</option>
+		<option value="232">Turkey</option>
+		<option value="233">Turkmenistan</option>
+		<option value="234">Turks and Caicos Islands</option>
+		<option value="235">Tuvalu</option>
+		<option value="236">Uganda</option>
+		<option value="237">Ukraine</option>
+		<option value="230">United Arab Emirates</option>
+		<option value="14">United Kingdom</option>
+		<option value="243">United Republic of Tanzania</option>
+		<option value="2">United State Of America</option>
+		<option value="171">United States Minor Outlying Islands</option>
+		<option value="246">Uruguay</option>
+		<option value="247">Uzbekistan</option>
+		<option value="162">Vanuatu</option>
+		<option value="18">Vatican City</option>
+		<option value="209">Viet Nam</option>
+		<option value="43">Virgin Islands, British</option>
+		<option value="244">Virgin Islands, U.S.</option>
+		<option value="249">Wallis and Futuna</option>
+		<option value="217">Western Sahara</option>
+		<option value="251">Yemen</option>
+		<option value="252">Zambia</option>
+		<option value="213">Zimbabwe</option>
+		<option value="83">Åland Islands</option>
+		</select>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<div class="col-md-6 margins" id="state_select">
+		<select id="state_id" name="state_id" class="form-control valid cityborder">
+		<option value="">State</option>
+		<option value="63">Andaman and Nicobar Islands</option>
+		<option value="8">Andhra Pradesh</option>
+		<option value="26">Arunachal Pradesh</option>
+		<option value="21">Assam</option>
+		<option value="27">Bihar</option>
+		<option value="64">Chandigarh</option>
+		<option value="22">Chhattisgarh</option>
+		<option value="65">Dadra and Nagar Haveli</option>
+		<option value="70">Daman & DNH</option>
+		<option value="66">Daman and Diu</option>
+		<option value="5">Delhi</option>
+		<option value="3">Goa</option>
+		<option value="2">Gujarat</option>
+		<option value="29">Haryana</option>
+		<option value="30">Himachal Pradesh</option>
+		<option value="6">Jammu Kashmir</option>
+		<option value="31">Jharkhand</option>
+		<option value="1">Karnataka</option>
+		<option value="7">Kerala</option>
+		<option value="67">Lakshadweep</option>
+		<option value="32">Madhya Pradesh</option>
+		<option value="69">Maharashtra</option>
+		<option value="34">Manipur</option>
+		<option value="35">Meghalaya</option>
+		<option value="36">Mizoram</option>
+		<option value="37">Nagaland</option>
+		<option value="23">Odisha</option>
+		<option value="68">Puducherry</option>
+		<option value="38">Punjab</option>
+		<option value="9">Rajasthan</option>
+		<option value="39">Sikkim</option>
+		<option value="4">Tamilnadu</option>
+		<option value="44">Telangana</option>
+		<option value="41">Tripura</option>
+		<option value="24">Uttar Pradesh</option>
+		<option value="42">Uttarakhand</option>
+		<option value="43">West Bengal</option>
+		</select>
+		</div>
+		<div class="col-md-6 margins" style="display:inline-block;">
+		<input id="postal_code" name="postal_code" type="text" placeholder="Pin Code *" class="form-control input-md cityborder" value="">
+		</div>
+		<div class="col-md-6 margins" id="province_id">
+		<input id="textinput" name="province" type="text" placeholder="Province *" class="form-control cityborder" value="">
+		</div>
+		</div>
+		</div>
+		<div class='row' style="margin-right: -7px; text-align: left;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:inline-block;">
+		<h5 class="fs-title col-lg-12"><strong style="font-weight:bold;">Captcha</strong></h5>
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-lg-2 col-xs-12 col-md-2 col-sm-2 donation_captcha">
+		<input id="num1" name="num1" value="3" class="form-control input-md" style="padding: 6px 6px;font-size: 18px;" readonly="">
+		</div>
+		<label class="col-lg-2 col-xs-12 col-md-2 col-sm-2 control-label plus-minus-eaqulto" for="textinput">+</label>
+		<div class="col-lg-2 col-xs-12 col-md-2 col-sm-2 donation_captcha">
+		<input id="num2" name="num2" value="9" class="form-control input-md" style="padding: 6px 6px;font-size: 18px;" readonly="">
+		</div>
+		<label class="col-lg-2 col-xs-12 col-md-2 col-sm-2 control-label plus-minus-eaqulto" for="textinput">=</label>
+		<div class="col-lg-2 col-xs-12 col-md-2 col-sm-2 donation_captcha donation-res">
+		<input id="captcha_result" name="captcha_result" class="form-control input-md" type="text">
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="checkbox">
+		<label for="checkboxes-0" style="font: 300 15px/20px 'myFirstFont';color: #000;">
+		<input style="width: 17px; margin-top: -5px;" type="checkbox" name="agree" checked="" id="agree" value="1">
+		I have read through the website's <a href="https://www.akshayapatra.org/privacy-policy" target="_blank" style="color: #004484 !important;"> Privacy Policy </a> &amp;<a href="https://www.akshayapatra.org/donors-privacy-policy" style="color: #004484 !important;" target="_blank"> Donor's Policy and Terms and Conditions </a> to make a donation.
+		</label>
+		</div>
+		</div>
+		</div>
+		<div class="form-group">
+		<input type="hidden" name="screenwidth" id="screenwidth" />
+		<input type="hidden" name="screenheight" id="screenheight" />
+		<input type="hidden" name="baseurl" id="baseurl" value="https://www.akshayapatra.org/">
+		<input type="hidden" name="donation_url" id="donation_url" value="back-to-school">
+		<input type="hidden" name="program_id" id="program_id" value="1">
+		<input type="hidden" name="send_receipt" id="send_receipt" value="0">
+		<input type="hidden" name="request_url" id="request_url" value="/back-to-school">
+		<input type="hidden" name="refernce_url" id="refernce_url" value="https://www.google.com/">
+		<input type="hidden" name="browser_name" id="browser_name" value="Firefox">
+		<input type="hidden" name="browser_version" id="browser_version" value="100.0">
+		<input type="hidden" name="browser_platform" id="browser_platform" value="Linux">
+		<input type="hidden" name="browser_useragent" id="browser_useragent" value="Mozilla/5.0 (X11; Linux x86_64; rv:100.0) Gecko/20100101 Firefox/100.0">
+		<div class="col-lg-4" style="margin-top: 20px;">
+		<img alt="Rapid SSL Certified Logo" src="https://akshayapatra.org/apadmin/uploads/userfiles/images/rapid_ssl_seal.gif">
+		</div>
+		<label class="col-lg-4 col-xs-12 control-label" for="">
+		<input name="singlebutton" id="singlebutton" type="submit" class="btn btn-primary" value="Continue To Payment" style="background-color:#fac400;border-radius: 10px !important;color: #000;margin-top: 20px;font: 700 20px/0px 'Ebrima'; padding: 20px !important;" />
+		</label>
+		</div>
+		<div class="form-group">
+		<div style="padding: 0px 9px 13px 11px; width: 100%;margin-top: 20px;font-style: italic">
+		<p class="donation-note" style="width: 100%;color:#000 !important;font-size:13px !important;">Avail tax exemption under Section 80G</p>
+		<p style="font-size:14px !important;">Have more questions about tax exemption? <a href="https://www.akshayapatra.org/tax-exemption-donation-faqs" style="color: #0077b5 !important;">Click here.</a></p>
+		</div>
+		</div>
+		<br>
+		<div class="form-group" style="text-align: center; display: none;">
+		<img src="./images/tax_exption.jpg" class="tax-img">
+		</div>
+		</div>
+		</div>
+		</form>
+		<script>
+		function showDonorFlds(){
+			if($('input[name="donations_amount"]:checked').val() == 'other' && $("input[name=amount]").val() == ''){
+				$('#amt_error_msg').show();
+				$('#myContribution').show();
+				$('#donorDetails').hide();
+				$('#nextBtn').show();
+				$('.taxmsg').show();
+				$('#second-form-msg').hide();
+			} else {
+				if($('input[name="donations_amount"]:checked').val() == 'other' && $("input[name=amount]").val() <= 100){
+					$('#donation_amt_error').show();
+				}else{
+					$('#donorDetails').show();
+					$('#nextBtn').hide();
+					$('.taxmsg').hide();
+					$('#backBtn').show();
+					$('#second-form-msg').show();
+					$('#myContribution').hide();
+				}
+			}
+		}
+		function showAmountoptn(){
+			$('#myContribution').show();
+			$('#donorDetails').hide();
+			$('#backBtn').hide();
+			$('#second-form-msg').hide();
+			$('#nextBtn').show();
+			$('.taxmsg').show();
+		}
+		
+		$('#otherlablec').hide();
+		$(".amountoptionc").on('click', function(event){
+			$('#otherlablec').show();
+			$('#other_meals_amount').hide();
+		});
+		
+		$("#other_option").on('click', function(event){
+			$('#otherlablec').hide();
+			$('#other_meals_amount').show();
+		});
+		$(document).ready(function() {
+			$('.infomode').tooltip();
+			$("#receipt_through_online_or_offline_id").prop("checked", true);
+		});
+		
+		
+		$('#hidamount').html('6400');
+		$('.hidamount').html('6400');
+		$("#senitisation_kit_amt").val(400);
+		$("input[name='donation_amount']"). val(6400);
+		$('.middaymealsoptions').show();
+		$('.familyhappinesskitsoptions').hide();
+		$('.happineskitsoptions').hide();
+		$('.mdmicon').show();
+		$('.fhkicon').hide();
+		$('.hkicon').hide();
+		
+		
+		$("#second-form-msg").hide();
+		function givecampgnamtClick(id){
+			var amtval = id;
+			$('#donatnamt_'+id).prop('checked', true);
+			$('#donatnamt_'+id).val(amtval);
+			var donationamount = $("input[name='donation_amount']:checked"). val();
+			var kitchkd = $("input[name=senitisation_kit_chk]:checked").val();
+			var amount_per_kit = 100 * (donationamount/1500);
+			var totdontamt = (parseInt(donationamount) + parseInt(amount_per_kit));
+			$("#senitisation_kit_amt").val(amount_per_kit);
+			//alert(donationamount);
+			if(donationamount == 3000){
+				if(kitchkd == 1){
+					$('#hidamount').html(totdontamt);
+					$('.hidamount').html(totdontamt);
+					$("input[name='donation_amount']"). val(totdontamt);
+				}else{
+					$('#hidamount').html('3000');
+					$('.hidamount').html('3000');
+					$("input[name='donation_amount']"). val(3000);
+				}
+				$("#sub_program"). val('Family Happiness Kit');
+				$('#donationsamount_3000').addClass('selamount');
+				$('#donationsamount_4500').removeClass('selamount');
+				$('#donationsamount_1500').removeClass('selamount');
+				$('#donationsamount_6000').removeClass('selamount');
+				
+				$('#donationsamount_1200').removeClass('selamount');
+				$('#donationsamount_2400').removeClass('selamount');
+				$('#donationsamount_3600').removeClass('selamount');
+				$('#donationsamount_4800').removeClass('selamount');
+				
+				$('#donationsamount_5500').removeClass('selamount');
+				$('#donationsamount_1100').removeClass('selamount');
+				$('#donationsamount_2750').removeClass('selamount');
+				$('#donationsamount_550').removeClass('selamount');
+				
+				$('#helpmsg_cookedmeals').show();
+				$('#helpmsg_happinesskit').hide();
+				$('#helpmsg_shaktikit').hide();
+				$('#helpmsg_homelessmom').hide();
+				
+				$('#helpmsg_famkit1').hide();
+				$('#helpmsg_famkit2').hide();
+				$('#helpmsg_famkit3').hide();
+				$('#helpmsg_famkit4').hide();
+				
+				$('#helpmsg_hapkit1').hide();
+				$('#helpmsg_hapkit2').hide();
+				$('#helpmsg_hapkit3').hide();
+				$('#helpmsg_hapkit4').hide();
+				
+				$('#helpmsg_otheramt').hide();
+			}else if(donationamount == 1500){
+				if(kitchkd == 1){
+					$('#hidamount').html(totdontamt);
+					$('.hidamount').html(totdontamt);
+					$("input[name='donation_amount']"). val(totdontamt);
+				}else{
+					$("input[name='donation_amount']"). val(1500);
+					$('.hidamount').html('1500');
+					$('#hidamount').html('1500');
+				}
+				$('#donationsamount_1500').addClass('selamount');
+				$('#donationsamount_3000').removeClass('selamount');
+				$('#donationsamount_4500').removeClass('selamount');
+				$('#donationsamount_6000').removeClass('selamount');
+				
+				$('#donationsamount_1200').removeClass('selamount');
+				$('#donationsamount_2400').removeClass('selamount');
+				$('#donationsamount_3600').removeClass('selamount');
+				$('#donationsamount_4800').removeClass('selamount');
+				
+				$('#donationsamount_5500').removeClass('selamount');
+				$('#donationsamount_1100').removeClass('selamount');
+				$('#donationsamount_2750').removeClass('selamount');
+				$('#donationsamount_550').removeClass('selamount');
+				
+				$('#helpmsg_cookedmeals').hide();
+				$('#helpmsg_happinesskit').hide();
+				$('#helpmsg_shaktikit').show();
+				$('#helpmsg_homelessmom').hide();
+				
+				$('#helpmsg_famkit1').hide();
+				$('#helpmsg_famkit2').hide();
+				$('#helpmsg_famkit3').hide();
+				$('#helpmsg_famkit4').hide();
+				
+				$('#helpmsg_hapkit1').hide();
+				$('#helpmsg_hapkit2').hide();
+				$('#helpmsg_hapkit3').hide();
+				$('#helpmsg_hapkit4').hide();
+				
+				$('#helpmsg_otheramt').hide();
+			}else if(donationamount == 4500){
+				if(kitchkd == 1){
+					$('#hidamount').html(totdontamt);
+					$('.hidamount').html(totdontamt);
+					$("input[name='donation_amount']"). val(totdontamt);
+				}else{
+					$("input[name='donation_amount']"). val(4500);
+					$('#hidamount').html('4500');
+					$('.hidamount').html('4500');
+				}
+				$('#donationsamount_4500').addClass('selamount');
+				$('#donationsamount_3000').removeClass('selamount');
+				$('#donationsamount_1500').removeClass('selamount');
+				$('#donationsamount_6000').removeClass('selamount');
+				
+				$('#donationsamount_1200').removeClass('selamount');
+				$('#donationsamount_2400').removeClass('selamount');
+				$('#donationsamount_3600').removeClass('selamount');
+				$('#donationsamount_4800').removeClass('selamount');
+				
+				$('#donationsamount_5500').removeClass('selamount');
+				$('#donationsamount_1100').removeClass('selamount');
+				$('#donationsamount_2750').removeClass('selamount');
+				$('#donationsamount_550').removeClass('selamount');
+				
+				$('#helpmsg_cookedmeals').hide();
+				$('#helpmsg_happinesskit').show();
+				$('#helpmsg_shaktikit').hide();
+				$('#helpmsg_homelessmom').hide();
+				
+				$('#helpmsg_famkit1').hide();
+				$('#helpmsg_famkit2').hide();
+				$('#helpmsg_famkit3').hide();
+				$('#helpmsg_famkit4').hide();
+				
+				$('#helpmsg_hapkit1').hide();
+				$('#helpmsg_hapkit2').hide();
+				$('#helpmsg_hapkit3').hide();
+				$('#helpmsg_hapkit4').hide();
+				
+				$('#helpmsg_otheramt').hide();
+			}else if(donationamount == 6000){
+				if(kitchkd == 1){
+					$('#hidamount').html(totdontamt);
+					$('.hidamount').html(totdontamt);
+					$("input[name='donation_amount']"). val(totdontamt);
+				}else{
+					$("input[name='donation_amount']"). val(6000);
+					$('#hidamount').html('6000');
+					$('.hidamount').html('6000');
+				}
+				$('#donationsamount_6000').addClass('selamount');
+				$('#donationsamount_3000').removeClass('selamount');
+				$('#donationsamount_4500').removeClass('selamount');
+				$('#donationsamount_1500').removeClass('selamount');
+				$('#helpmsg_cookedmeals').hide();
+				$('#helpmsg_happinesskit').hide();
+				$('#helpmsg_shaktikit').hide();
+				$('#helpmsg_homelessmom').show();
+				
+				$('#helpmsg_famkit1').hide();
+				$('#helpmsg_famkit2').hide();
+				$('#helpmsg_famkit3').hide();
+				$('#helpmsg_famkit4').hide();
+				
+				$('#helpmsg_hapkit1').hide();
+				$('#helpmsg_hapkit2').hide();
+				$('#helpmsg_hapkit3').hide();
+				$('#helpmsg_hapkit4').hide();
+				
+				$('#helpmsg_otheramt').hide();
+			}
+			
+			
+		}
+		
+		$('#donation_amt_errorc').hide();
+		$(".getmidmealotheramt").on('keyup', function(event){
+			var donationamt = $('#other_meals_amount').val();
+			$('.hidamount').html(donationamt);
+			$('#hidamount').html(donationamt);
+			$("#donation_amount").val(donationamt);
+			$("#senitisation_kit_amt").val('100');
+			
+			if(donationamt < 101){
+				$('#donation_amt_errorc').show();
+			}else{
+				$('#donation_amt_errorc').hide();
+			}
+			$('#helpmsg_otheramt').show();
+			$('#helpmsg_cookedmeals').hide();
+			$('#helpmsg_happinesskit').hide();
+			$('#helpmsg_shaktikit').hide();
+			$('#helpmsg_homelessmom').hide();
+			
+			$('#helpmsg_hapkit1').hide();
+			$('#helpmsg_hapkit2').hide();
+			$('#helpmsg_hapkit3').hide();
+			$('#helpmsg_hapkit4').hide();
+			
+			$('#helpmsg_famkit1').show();
+			$('#helpmsg_famkit2').hide();
+			$('#helpmsg_famkit3').hide();
+			$('#helpmsg_famkit4').hide();
+			$('#donationsamount_1500').removeClass('selamount');
+			$('#donationsamount_3000').removeClass('selamount');
+			$('#donationsamount_4500').removeClass('selamount');
+			$('#donationsamount_6000').removeClass('selamount');	
+			$('#donationsamount_1200').removeClass('selamount');
+			$('#donationsamount_2400').removeClass('selamount');
+			$('#donationsamount_3600').removeClass('selamount');
+			$('#donationsamount_4800').removeClass('selamount');
+			$('#donationsamount_550').removeClass('selamount');
+			$('#donationsamount_1100').removeClass('selamount');
+			$('#donationsamount_2750').removeClass('selamount');
+			$('#donationsamount_5500').removeClass('selamount');
+			
+		});
+		
+		
+		</script>
+		<style>
+		#donation_amt_errorc {
+			color: #ff0000!important;
+			display: inline-block;
+			font-size: 13px;
+			font-weight:normal !important;
+		}
+		.selamount {
+			font-weight: bold !important;
+			background:#fac400 !important;
+			color: #000 !important;
+		}
+		.campoptncss {
+			padding: 5px;
+			margin-bottom: 8px;
+			border: 1px solid #dcf3f2;
+			line-height: 28px;
+			cursor: pointer;
+			text-align: center;
+			color: #fff;
+			padding-left: 10px;
+			background: #000000;
+		}
+		.helpmsg{
+			background: linear-gradient(45deg, #faf8f3, #efefef, #faf8f3);
+			color: #000 !important;
+			border-radius: 5px;
+			padding: 2px !important;
+		}
+		.right-sticky-child.posFix {
+			position: fixed;
+			top: 45%;
+			left: 50%;
+			margin-left: 27px;
+			z-index: 1;
+		}
+		
+		.right-sticky-child {
+			display: block;
+			float: left;
+			width: 558px;
+			padding: 0px;
+			text-align: center;
+		}
+		.donate-form-block {
+			position: absolute;
+			z-index: 10;
+			left: 52%;
+			width: 558px;
+			top: 4rem;
+		}
+		.donate-hero-wrapper {
+			position: relative;
+			margin-bottom: 5rem;
+		}
+		.rel-wrapper {
+			position: relative;
+		}
+		</style> </div>
+		</div>
+		<p>&nbsp;</p>
+		</div>
+		<div class="row">
+		
+		
+		
+		
+		</div>
+		
+		<style>
+		@font-face {
+		  font-family: myFirstFont;
+		  src: url(./files/fonts/ABeeZee-Regular.ttf);
+		}
+		h1, h2, h3, h4, p {
+			font-family: myFirstFont !important;
+		}
+		h2{
+			font: 900 22px/38px 'myFirstFont';
+			color: #014f8b;
+			text-align:left;
+		}
+		h3{
+			font: 600 18px/30px 'myFirstFont';
+			color:#443c76;
+			text-align: left;
+		}
+		h4 {
+			font: 600 20px/30px 'myFirstFont';
+			color: #fff;
+			text-align:left;
+			margin-top: 6px;
+			background:#443c76;
+			padding:6px;
+		}
+		h5{
+			font: 600 18px/20px 'myFirstFont' !important;
+			color: #443c76;
+			margin-top: 6px;
+		}
+		p{
+		  font-family: myFirstFont;
+		}
+		p span {
+		  font-family: myFirstFont;
+		}
+		.donate-fill h4 {
+			font: 900 14px/30px 'myFirstFont';
+		}
+		.donate-fill h2 {
+			font: 900 16px/30px 'myFirstFont' !important;
+		}
+		.loader {
+			display: none;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url('../images/loader1.gif') 50% 50% no-repeat rgba(249, 249, 249, 0.43)
+		}
+		.main-container {
+			font: 300 18px/25px 'myFirstFont';
+			padding: 0px 0 !important;
+			background:#fff;
+			color: #000 !important;
+		}
+		.details-txt p, .details-txt ul li, p {
+			color: #000 !important;
+			font: 500 18px/28px 'myFirstFont' !important;
+		}
+		#form_donation input[type="radio"] {
+			width: 20px;
+			height: 18px !important;
+			float: left;
+		}
+		i, cite, em, var, address, dfn {
+			font-style: normal !important;
+		}
+		.col-lg-1 {
+		   width: 3.333333%;
+		}
+		.fs-title {
+			color: #000 !important;
+			margin-bottom: 10px;
+			font-weight:bold;
+		}
+		td, th {
+			padding: 6px 12px!important;
+			text-align: left !important;
+			border: 3px solid #ffffff !important;
+			background: #fdd831;
+			vertical-align: middle !important;
+		}
+		th {
+		   background: #fdd831;
+		   color: #000 !important;
+		}
+		.banerdesk{
+			display:block;
+		}
+		.banermob{
+			display:none;;
+		}
+		.impactwhd{
+			margin-top:30px;
+		}
+		.at-svc-linkedin{
+			display:none !important;
+		}
+		.at-svc-gmail{
+			display:none !important;
+		}
+		.at-svc-wordpress{
+			display:none !important;
+		}
+		ul {
+			list-style-type: disc;
+			padding-left: 40px;
+		}
+		@media (min-width: 1140px){
+			.container {
+				width: 90%;
+			}
+		}
+		@media (min-width: 992px){
+			.col-md-2 {
+				width: 17.666667% !important;
+			}
+		}
+		@media screen and (max-device-width: 720px) and (min-device-width: 320px){
+			h2{
+				font: 900 18px/30px 'myFirstFont';
+				color: #014f8b;
+				text-align:left;
+			}
+			.banerdesk{
+				display:none;
+			}
+			.banermob{
+				display:block;
+			}
+			.fa-square{
+				display:none;
+			}
+			.control-label {
+				padding-left: 12px !important;
+			}
+			#blockContainer {
+				display: flex;
+				flex-direction: column;
+			}
+			#blockContainer div {
+				flex: 1;
+			}
+			#blockContainer div:nth-of-type(1) {
+				-webkit-order: 2;
+				order: 2;
+			}
+			#blockContainer div:nth-of-type(2) {
+				-webkit-order: 1;
+				order: 1;
+			}
+			
+		}
+		.gorakhpur-options {
+			width: 30%!important;
+		}
+		@media screen and (max-width: 1140px){
+			.gorakhpur-options {
+				width: 50%!important;
+			}
+		}
+		@media screen and (max-width: 480px){
+			.gorakhpur-options {
+				width: 50% !important;
+			}
+			.impactwhd{
+				margin-top:0px !important;
+			}
+			.byjusdonatebtnspan {
+				float: right;
+				background: #fac400;
+				padding: 5px 15px !important;
+				margin-top: 15px !important;
+				border-radius: 6px;
+			}
+		}
+		@media (min-width: 1200px){
+			.col-lg-2 {
+				width: 19.666667%;
+			}
+		}
+		.campaign-detail-box ul li span {
+			font-weight: 500 !important;
+		}
+		.header{
+			height: auto;background:#fff;
+		}
+		.byjudonatebtn {
+			color: #000 !important;
+			font: 700 20px/30px 'myFirstFont';
+			text-transform: uppercase;
+		}
+		.byjusdonatebtnspan {
+			float: right;
+			background: #fac400;
+			padding: 5px 40px;
+			margin-top: 30px;
+			border-radius: 6px;
+		}
+		a, a:hover, a:focus {
+			color: #000 !important;
+		}
+		.btn-primary{
+			margin:0px;
+		}
+		.header{
+			background:#fff;
+		}
+		</style> <script type="text/javascript" src="files/js/menumaker.js?v=1.0"></script>
+		<script src="files/js/grid.js?v=1.0"></script>
+		<script type="text/javascript" src="files/js/jquery-ui.min.js"></script> 
+		
+		<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-502271091d424963"></script>
+		
+		<script src="javascripts/jquery.incremental-counter.js?v=1.0"></script>
+		<script src="javascripts/owl.carousel.js?v=1.1"></script>
+		<script src="javascripts/index.js?v=578.29"></script>
+		<script src="javascripts/donations.js?v=578.20"></script>
+		<script src="javascripts/dob.js?v=578.27"></script>
+		
+</body>
+
+</html>

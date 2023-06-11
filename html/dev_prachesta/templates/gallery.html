@@ -1,0 +1,36 @@
+{% include 'head.html' %}
+
+<body>
+{% include 'header.html' %}
+
+<!--  ************************* Page Title Starts Here ************************** -->
+
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2>Our Gallery</h2>
+                <ul>
+                    <li> <a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> Achievements</li>
+                    <li><i class="fas fa-angle-double-right"></i> {{ location }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div id="portfolio" class="gallery">
+   <div class="container">
+       <div class="row">
+
+           {% for list_item in files %}
+           <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter hdpe">
+               <img src= {{ list_item }} class="img-responsive">
+           </div>
+           {% endfor %}
+
+       </div>
+   </div>
+</div>
+
+</body>
+
+</html>

@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: scp to host as only html files
-        run: |
-          sudo apt-get install sshpass -y
+        run:
+          ## sudo apt-get install sshpass -y
           sshpass -p ${{ secrets.PRACHESTA_SERVER_PASSWORD }} scp -r . root@119.18.55.86:/var/www/html/git_hub_test/

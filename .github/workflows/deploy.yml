@@ -1,24 +1,18 @@
-name: Deploy to Prachesta server
-on:
-  push:
-    branches:
-      - main
-
+name: scp files
+on: [push]
 jobs:
-  deploy:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: scp to host as only html files
-        uses: actions/checkout@v2
-        with:
-          host: ${{ secrets.PRACHESTA_IP }}
-          port: 22
-          user: ${{ secrets.PRACHESTA_USER }}
-          pass: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
-          run:
-            ## sudo apt-get install sshpass -y
-            scp -r . ${{ secrets.PRACHESTA_USER}}@${{ secrets.PRACHESTA_IP }}/var/www/html/git_hub_test/
+    - uses: actions/checkout@v3
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.PRACHESTA_IP }}
+        username: ${{ secrets.PRACHESTA_USER }}
+        password: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
+        ## port: ${{ secrets.PORT }}
+        source: "./html"
+        target: /var/www/html/git_hub_test/

@@ -13,8 +13,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: scp to host as only html files
-        run:
-          ## sudo apt-get install sshpass -y
-          sshpass -p ${{ secrets.PRACHESTA_SERVER_PASSWORD }} scp -r . ${{ secrets.PRACHESTA_USER}}@${{ secrets.PRACHESTA_IP }}:/var/www/html/git_hub_test/
-        env:
-          SSHPASS: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
+        uses: niharswain/prachesta/sshpass-action@v2
+        with:
+          host: ${{ secrets.PRACHESTA_IP }}
+          port: 22
+          user: ${{ secrets.PRACHESTA_USER }}
+          pass: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
+          run:
+            ## sudo apt-get install sshpass -y
+            scp -r . ${{ secrets.PRACHESTA_USER}}@${{ secrets.PRACHESTA_IP }}/var/www/html/git_hub_test/

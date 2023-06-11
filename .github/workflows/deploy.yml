@@ -15,4 +15,6 @@ jobs:
       - name: scp to host as only html files
         run:
           ## sudo apt-get install sshpass -y
-          sshpass -p ${{ secrets.PRACHESTA_SERVER_PASSWORD }} scp -r . ${{ secrets.PRACHESTA_USER}}@${{ secrets.PRACHESTA_IP }}:/var/www/html/git_hub_test/
+          sshpass -p ${{ secrets.PRACHESTA_SERVER_PASSWORD }} ssh -o StrictHostKeyChecking=no -p 22 scp -r . ${{ secrets.PRACHESTA_USER}}@${{ secrets.PRACHESTA_IP }}:/var/www/html/git_hub_test/
+        env:
+          SSHPASS: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}

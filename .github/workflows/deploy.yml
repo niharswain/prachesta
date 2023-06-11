@@ -13,6 +13,6 @@ jobs:
         host: ${{ secrets.PRACHESTA_IP }}
         username: ${{ secrets.PRACHESTA_USER }}
         password: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
-        ## port: ${{ secrets.PORT }}
+        port: ${{ secrets.PORT }}
         source: "./html"
         target: /var/www/html/git_hub_test/

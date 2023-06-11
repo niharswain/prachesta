@@ -15,4 +15,4 @@ jobs:
         password: ${{ secrets.PRACHESTA_SERVER_PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "./html"
-        target: /var/www/html/git_hub_test/
+        target: /var/www/
